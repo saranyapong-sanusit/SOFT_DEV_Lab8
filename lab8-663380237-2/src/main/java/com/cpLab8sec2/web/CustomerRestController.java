@@ -66,7 +66,8 @@ public class CustomerRestController {
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<CustomerResponse> updateCustomer(@PathVariable Long id, @RequestBody @Valid CustomerRequest custReq){
+	public ResponseEntity<?> updateCustomer(@PathVariable Long id,
+			@RequestBody @Valid CustomerRequest custReq){
 		return new ResponseEntity<>(custService.updateCustomer(id, custReq), HttpStatus.OK);
 	}
 	

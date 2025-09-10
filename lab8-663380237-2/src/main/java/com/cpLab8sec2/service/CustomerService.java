@@ -3,12 +3,14 @@ package com.cpLab8sec2.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.cpLab8sec2.dto.CustomerRequest;
 import com.cpLab8sec2.dto.CustomerResponse;
 import com.cpLab8sec2.entity.Customer;
 import com.cpLab8sec2.repository.CustomerRepository;
 
+@Service 
 public class CustomerService {
 	@Autowired
 	private CustomerRepository repoCust;
